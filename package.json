@@ -1,0 +1,55 @@
+{
+  "name": "tiktok-scraper-api",
+  "version": "1.0.0",
+  "description": "API wrapper and scraper for Somjik's TikTok mobile API.",
+  "repository": "https://github.com/james-elicx/tiktok-scraper-api",
+  "author": "James",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "bugs": {
+    "url": "https://github.com/james-elicx/tiktok-scraper-api/issues"
+  },
+  "homepage": "https://github.com/james-elicx/tiktok-scraper-api#readme",
+  "scripts": {
+    "start": "tsm --require=./filter-warnings.cjs src/scraper.ts",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest --passWithNoTests",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint \"./**/*.{cjs,js,ts}\"",
+    "tsc": "tsc --noEmit",
+    "tsc:watch": "tsc --watch",
+    "clean": "rimraf node_modules && rimraf dist"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.2.0",
+    "@commitlint/config-conventional": "^17.2.0",
+    "@tsconfig/strictest": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.26.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "tsm": "^2.3.0",
+    "typescript": "^4.8.4",
+    "vitest": "^0.24.4"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "yarn": ">=3.0.0",
+    "node": ">=16.0.0"
+  },
+  "packageManager": "yarn@3.2.1",
+  "dependencies": {
+    "axios": "^1.2.3",
+    "sqlite3": "^5.1.4",
+    "zod": "^3.20.2"
+  }
+}
